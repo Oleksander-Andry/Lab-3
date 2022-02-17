@@ -1,0 +1,27 @@
+using System;
+
+namespace lab3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double F;
+            int x,y;
+            Console.Write("Enter x = ");
+            x = int.Parse(Console.ReadLine());
+            Console.Write("Enter y = ");
+            y = int.Parse(Console.ReadLine());
+            if (Math.Pow(Math.Min(x,y),2)+Math.Pow(y,4)==0)
+            {
+                Console.WriteLine("Знаменник дорiвнює нулю!");
+            }
+            else
+            {
+                F =(Math.Max(Math.Pow(x,2), Math.Max( Math.Pow(y, 2),x-y) )+x) / (Math.Pow(Math.Min(x, y), 2) + Math.Pow(y, 4));
+                Console.WriteLine("F = {0:f2}",F);
+            }
+
+        }
+    }
+}
